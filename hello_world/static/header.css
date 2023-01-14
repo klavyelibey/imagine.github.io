@@ -1,0 +1,59 @@
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #ffb6c1 0%,
+      /* Pembe rengi */ #ffc0cb 29%,
+      /* Pembe rengi */ #ff69b4 67%,
+      /* Pembe rengi */ #ffffff 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+    /* Headings (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  color: #003366;
+}
+
+/* Body text */
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Links */
+a {
+  color: #003366;
+  text-decoration: underline;
+}
+a:hover {
+  color: #006699;
+  text-decoration: underline;
+}
+
+/* Emphasis */
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+

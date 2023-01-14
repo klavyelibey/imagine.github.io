@@ -6,20 +6,94 @@
 
 <head>
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #ffb6c1 0%,
+      /* Pembe rengi */ #ffc0cb 29%,
+      /* Pembe rengi */ #ff69b4 67%,
+      /* Pembe rengi */ #ffffff 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+    /* Headings (h1, h2, h3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  color: #003366;
+}
 
-<body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Django
-            </p>
-            <p class="small">
-                Edit <code>hello_world/templates/index.html</code> and see changes live!
-            </p>
-        </header>
-    </div>
+/* Body text */
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Links */
+a {
+  color: #003366;
+  text-decoration: underline;
+}
+a:hover {
+  color: #006699;
+  text-decoration: underline;
+}
+
+/* Emphasis */
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+
+
+
+
+    </style>
+    <body class="container">
+    <header>
+        {% include 'header.html' %}  
+    </header>
+
+    <main class="container">
+        {% block main %}
+           {% include 'main.html' %}
+        {% endblock %}
+
+        
+    </main>
+
+
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+     
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 
 </html>
